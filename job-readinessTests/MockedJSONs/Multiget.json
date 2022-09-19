@@ -1,0 +1,941 @@
+[
+    {
+        "code": 200,
+        "body": {
+            "id": "MLM1355861327",
+            "site_id": "MLM",
+            "title": "Adaptador iPad/iPhone Lightning Usb: Memoria, Teclado, Mouse",
+            "subtitle": null,
+            "seller_id": 471096278,
+            "category_id": "MLM437952",
+            "official_store_id": null,
+            "price": 150.1,
+            "base_price": 150.1,
+            "original_price": 158,
+            "currency_id": "MXN",
+            "initial_quantity": 217,
+            "available_quantity": 1,
+            "sold_quantity": 150,
+            "sale_terms": [
+                {
+                    "id": "WARRANTY_TIME",
+                    "name": "Tiempo de garantía",
+                    "value_id": null,
+                    "value_name": "30 días",
+                    "value_struct": {
+                        "number": 30,
+                        "unit": "días"
+                    },
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "30 días",
+                            "struct": {
+                                "number": 30,
+                                "unit": "días"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "WARRANTY_TYPE",
+                    "name": "Tipo de garantía",
+                    "value_id": "2230280",
+                    "value_name": "Garantía del vendedor",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": "2230280",
+                            "name": "Garantía del vendedor",
+                            "struct": null
+                        }
+                    ]
+                }
+            ],
+            "buying_mode": "buy_it_now",
+            "listing_type_id": "gold_pro",
+            "start_time": "2021-12-16T10:44:20.000Z",
+            "stop_time": "2041-12-11T04:00:00.000Z",
+            "condition": "new",
+            "permalink": "https://articulo.mercadolibre.com.mx/MLM-1355861327-adaptador-ipadiphone-lightning-usb-memoria-teclado-mouse-_JM",
+            "thumbnail_id": "718136-MLM51051955029_082022",
+            "thumbnail": "http://http2.mlstatic.com/D_718136-MLM51051955029_082022-I.jpg",
+            "secure_thumbnail": "https://http2.mlstatic.com/D_718136-MLM51051955029_082022-I.jpg",
+            "pictures": [
+                {
+                    "id": "718136-MLM51051955029_082022",
+                    "url": "http://http2.mlstatic.com/D_718136-MLM51051955029_082022-O.jpg",
+                    "secure_url": "https://http2.mlstatic.com/D_718136-MLM51051955029_082022-O.jpg",
+                    "size": "500x497",
+                    "max_size": "936x932",
+                    "quality": ""
+                },
+                {
+                    "id": "788052-MLM48587034608_122021",
+                    "url": "http://http2.mlstatic.com/D_788052-MLM48587034608_122021-O.jpg",
+                    "secure_url": "https://http2.mlstatic.com/D_788052-MLM48587034608_122021-O.jpg",
+                    "size": "500x500",
+                    "max_size": "1000x1000",
+                    "quality": ""
+                },
+                {
+                    "id": "718474-MLM48587118061_122021",
+                    "url": "http://http2.mlstatic.com/D_718474-MLM48587118061_122021-O.jpg",
+                    "secure_url": "https://http2.mlstatic.com/D_718474-MLM48587118061_122021-O.jpg",
+                    "size": "500x500",
+                    "max_size": "1000x1000",
+                    "quality": ""
+                },
+                {
+                    "id": "683417-MLM48587063425_122021",
+                    "url": "http://http2.mlstatic.com/D_683417-MLM48587063425_122021-O.jpg",
+                    "secure_url": "https://http2.mlstatic.com/D_683417-MLM48587063425_122021-O.jpg",
+                    "size": "500x500",
+                    "max_size": "1000x1000",
+                    "quality": ""
+                },
+                {
+                    "id": "913599-MLM48586952959_122021",
+                    "url": "http://http2.mlstatic.com/D_913599-MLM48586952959_122021-O.jpg",
+                    "secure_url": "https://http2.mlstatic.com/D_913599-MLM48586952959_122021-O.jpg",
+                    "size": "500x500",
+                    "max_size": "1000x1000",
+                    "quality": ""
+                },
+                {
+                    "id": "639387-MLM48587105201_122021",
+                    "url": "http://http2.mlstatic.com/D_639387-MLM48587105201_122021-O.jpg",
+                    "secure_url": "https://http2.mlstatic.com/D_639387-MLM48587105201_122021-O.jpg",
+                    "size": "500x500",
+                    "max_size": "1000x1000",
+                    "quality": ""
+                },
+                {
+                    "id": "818430-MLM48586943995_122021",
+                    "url": "http://http2.mlstatic.com/D_818430-MLM48586943995_122021-O.jpg",
+                    "secure_url": "https://http2.mlstatic.com/D_818430-MLM48586943995_122021-O.jpg",
+                    "size": "500x500",
+                    "max_size": "1000x1000",
+                    "quality": ""
+                },
+                {
+                    "id": "677862-MLM48587027665_122021",
+                    "url": "http://http2.mlstatic.com/D_677862-MLM48587027665_122021-O.jpg",
+                    "secure_url": "https://http2.mlstatic.com/D_677862-MLM48587027665_122021-O.jpg",
+                    "size": "500x500",
+                    "max_size": "1000x1000",
+                    "quality": ""
+                },
+                {
+                    "id": "602118-MLM48587063428_122021",
+                    "url": "http://http2.mlstatic.com/D_602118-MLM48587063428_122021-O.jpg",
+                    "secure_url": "https://http2.mlstatic.com/D_602118-MLM48587063428_122021-O.jpg",
+                    "size": "500x500",
+                    "max_size": "1000x1000",
+                    "quality": ""
+                },
+                {
+                    "id": "671977-MLM48587027667_122021",
+                    "url": "http://http2.mlstatic.com/D_671977-MLM48587027667_122021-O.jpg",
+                    "secure_url": "https://http2.mlstatic.com/D_671977-MLM48587027667_122021-O.jpg",
+                    "size": "500x500",
+                    "max_size": "1000x1000",
+                    "quality": ""
+                }
+            ],
+            "video_id": null,
+            "descriptions": [],
+            "accepts_mercadopago": true,
+            "non_mercado_pago_payment_methods": [],
+            "shipping": {
+                "mode": "me2",
+                "methods": [],
+                "tags": [],
+                "dimensions": null,
+                "local_pick_up": false,
+                "free_shipping": false,
+                "logistic_type": "fulfillment",
+                "store_pick_up": false
+            },
+            "international_delivery_mode": "none",
+            "seller_address": {
+                "city": {
+                    "id": "TUxNQ0FaQzcwODk",
+                    "name": "Azcapotzalco"
+                },
+                "state": {
+                    "id": "MX-DIF",
+                    "name": "Distrito Federal"
+                },
+                "country": {
+                    "id": "MX",
+                    "name": "Mexico"
+                },
+                "search_location": {
+                    "neighborhood": {
+                        "id": "TUxNQklORDQ5OTU",
+                        "name": "Industrial Vallejo"
+                    },
+                    "city": {
+                        "id": "TUxNQ0FaQzcwODk",
+                        "name": "Azcapotzalco"
+                    },
+                    "state": {
+                        "id": "TUxNUERJUzYwOTQ",
+                        "name": "Distrito Federal"
+                    }
+                },
+                "id": 1198069290
+            },
+            "seller_contact": null,
+            "location": {},
+            "coverage_areas": [],
+            "attributes": [
+                {
+                    "id": "BRAND",
+                    "name": "Marca",
+                    "value_id": null,
+                    "value_name": "gomita",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "gomita",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "GTIN",
+                    "name": "Código universal de producto",
+                    "value_id": null,
+                    "value_name": "768696804165",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "768696804165",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "INPUT_CONNECTORS",
+                    "name": "Conectores de entrada",
+                    "value_id": null,
+                    "value_name": "IPHONE",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "IPHONE",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "INPUT_CONNECTORS_NUMBER",
+                    "name": "Cantidad de conectores de entrada",
+                    "value_id": null,
+                    "value_name": "1",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "1",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "IS_AUXILIARY",
+                    "name": "Es auxiliar",
+                    "value_id": "242085",
+                    "value_name": "Sí",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": "242085",
+                            "name": "Sí",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "ITEM_CONDITION",
+                    "name": "Condición del ítem",
+                    "value_id": "2230284",
+                    "value_name": "Nuevo",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": "2230284",
+                            "name": "Nuevo",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "MODEL",
+                    "name": "Modelo",
+                    "value_id": null,
+                    "value_name": "dn255a",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "dn255a",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "OUTPUT_CONNECTORS",
+                    "name": "Conectores de salida",
+                    "value_id": "102303",
+                    "value_name": "USB",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": "102303",
+                            "name": "USB",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "OUTPUT_CONNECTORS_NUMBER",
+                    "name": "Cantidad de conectores de salida",
+                    "value_id": null,
+                    "value_name": "1",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "1",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "PACKAGE_HEIGHT",
+                    "name": "Altura del paquete",
+                    "value_id": null,
+                    "value_name": "1.4 cm",
+                    "value_struct": {
+                        "number": 1.4,
+                        "unit": "cm"
+                    },
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "1.4 cm",
+                            "struct": {
+                                "number": 1.4,
+                                "unit": "cm"
+                            }
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "PACKAGE_LENGTH",
+                    "name": "Largo del paquete",
+                    "value_id": null,
+                    "value_name": "6.8 cm",
+                    "value_struct": {
+                        "number": 6.8,
+                        "unit": "cm"
+                    },
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "6.8 cm",
+                            "struct": {
+                                "number": 6.8,
+                                "unit": "cm"
+                            }
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "PACKAGE_WEIGHT",
+                    "name": "Peso del paquete",
+                    "value_id": null,
+                    "value_name": "20 g",
+                    "value_struct": {
+                        "number": 20,
+                        "unit": "g"
+                    },
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "20 g",
+                            "struct": {
+                                "number": 20,
+                                "unit": "g"
+                            }
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "PACKAGE_WIDTH",
+                    "name": "Ancho del paquete",
+                    "value_id": null,
+                    "value_name": "15.6 cm",
+                    "value_struct": {
+                        "number": 15.6,
+                        "unit": "cm"
+                    },
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "15.6 cm",
+                            "struct": {
+                                "number": 15.6,
+                                "unit": "cm"
+                            }
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "PRODUCT_FEATURES",
+                    "name": "Características del producto",
+                    "value_id": "8847339",
+                    "value_name": "Sin vencimiento",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": "8847339",
+                            "name": "Sin vencimiento",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "SELLER_SKU",
+                    "name": "SKU",
+                    "value_id": null,
+                    "value_name": "SZWW-DN255A-001",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "SZWW-DN255A-001",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "SHIPMENT_PACKING",
+                    "name": "Embalaje del envío",
+                    "value_id": "7575937",
+                    "value_name": "Sobre",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": "7575937",
+                            "name": "Sobre",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "UNITS_PER_PACKAGE",
+                    "name": "Unidades por envase",
+                    "value_id": null,
+                    "value_name": "1",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "1",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "USB_PORT_VERSION",
+                    "name": "Versión del puerto USB",
+                    "value_id": "99778",
+                    "value_name": "3.0",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": "99778",
+                            "name": "3.0",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                }
+            ],
+            "warnings": [],
+            "listing_source": "",
+            "variations": [],
+            "status": "active",
+            "sub_status": [],
+            "tags": [
+                "good_quality_thumbnail",
+                "loyalty_discount_eligible",
+                "good_quality_picture",
+                "immediate_payment",
+                "cart_eligible"
+            ],
+            "warranty": "Garantía del vendedor: 30 días",
+            "catalog_product_id": null,
+            "domain_id": "MLM-CELLPHONE_USB_AND_AUXILIARY_ADAPTERS",
+            "parent_item_id": null,
+            "differential_pricing": null,
+            "deal_ids": [],
+            "automatic_relist": false,
+            "date_created": "2021-12-16T10:44:20.000Z",
+            "last_updated": "2022-09-17T01:45:51.000Z",
+            "health": 0.87,
+            "catalog_listing": false,
+            "channels": [
+                "marketplace",
+                "mshops"
+            ]
+        }
+    },
+    {
+        "code": 200,
+        "body": {
+            "id": "MLM905863486",
+            "site_id": "MLM",
+            "title": "Adaptador Otg Usb Type Tipo C Universal",
+            "subtitle": null,
+            "seller_id": 51940259,
+            "category_id": "MLM437952",
+            "official_store_id": null,
+            "price": 39.99,
+            "base_price": 39.99,
+            "original_price": null,
+            "currency_id": "MXN",
+            "initial_quantity": 319,
+            "available_quantity": 2,
+            "sold_quantity": 200,
+            "sale_terms": [
+                {
+                    "id": "WARRANTY_TYPE",
+                    "name": "Tipo de garantía",
+                    "value_id": "2230280",
+                    "value_name": "Garantía del vendedor",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": "2230280",
+                            "name": "Garantía del vendedor",
+                            "struct": null
+                        }
+                    ]
+                },
+                {
+                    "id": "WARRANTY_TIME",
+                    "name": "Tiempo de garantía",
+                    "value_id": null,
+                    "value_name": "10 días",
+                    "value_struct": {
+                        "number": 10,
+                        "unit": "días"
+                    },
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "10 días",
+                            "struct": {
+                                "number": 10,
+                                "unit": "días"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "buying_mode": "buy_it_now",
+            "listing_type_id": "gold_special",
+            "start_time": "2021-04-13T21:13:48.000Z",
+            "stop_time": "2041-04-08T04:00:00.000Z",
+            "condition": "new",
+            "permalink": "https://articulo.mercadolibre.com.mx/MLM-905863486-adaptador-otg-usb-type-tipo-c-universal-_JM",
+            "thumbnail_id": "642170-MLM45554610158_042021",
+            "thumbnail": "http://http2.mlstatic.com/D_642170-MLM45554610158_042021-I.jpg",
+            "secure_thumbnail": "https://http2.mlstatic.com/D_642170-MLM45554610158_042021-I.jpg",
+            "pictures": [
+                {
+                    "id": "608273-MLM45554564734_042021",
+                    "url": "http://http2.mlstatic.com/D_608273-MLM45554564734_042021-O.jpg",
+                    "secure_url": "https://http2.mlstatic.com/D_608273-MLM45554564734_042021-O.jpg",
+                    "size": "464x500",
+                    "max_size": "871x937",
+                    "quality": ""
+                },
+                {
+                    "id": "642170-MLM45554610158_042021",
+                    "url": "http://http2.mlstatic.com/D_642170-MLM45554610158_042021-O.jpg",
+                    "secure_url": "https://http2.mlstatic.com/D_642170-MLM45554610158_042021-O.jpg",
+                    "size": "464x500",
+                    "max_size": "871x937",
+                    "quality": ""
+                }
+            ],
+            "video_id": null,
+            "descriptions": [],
+            "accepts_mercadopago": true,
+            "non_mercado_pago_payment_methods": [],
+            "shipping": {
+                "mode": "me2",
+                "methods": [],
+                "tags": [],
+                "dimensions": null,
+                "local_pick_up": false,
+                "free_shipping": false,
+                "logistic_type": "fulfillment",
+                "store_pick_up": false
+            },
+            "international_delivery_mode": "none",
+            "seller_address": {
+                "city": {
+                    "id": "TUxNQ0FHVTk2NjY",
+                    "name": "Aguascalientes"
+                },
+                "state": {
+                    "id": "MX-AGU",
+                    "name": "Aguascalientes"
+                },
+                "country": {
+                    "id": "MX",
+                    "name": "Mexico"
+                },
+                "search_location": {
+                    "neighborhood": {
+                        "id": "TUxNQkbBVDMyNTA",
+                        "name": "Fátima"
+                    },
+                    "city": {
+                        "id": "TUxNQ0FHVTk2NjY",
+                        "name": "Aguascalientes"
+                    },
+                    "state": {
+                        "id": "TUxNUEFHVTMwNjE",
+                        "name": "Aguascalientes"
+                    }
+                },
+                "id": 152940226
+            },
+            "seller_contact": null,
+            "location": {},
+            "coverage_areas": [],
+            "attributes": [
+                {
+                    "id": "BRAND",
+                    "name": "Marca",
+                    "value_id": null,
+                    "value_name": "Flexcop",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "Flexcop",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "INPUT_CONNECTORS",
+                    "name": "Conectores de entrada",
+                    "value_id": null,
+                    "value_name": "1",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "1",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "INPUT_CONNECTORS_NUMBER",
+                    "name": "Cantidad de conectores de entrada",
+                    "value_id": null,
+                    "value_name": "1",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "1",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "IS_AUXILIARY",
+                    "name": "Es auxiliar",
+                    "value_id": "242084",
+                    "value_name": "No",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": "242084",
+                            "name": "No",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "ITEM_CONDITION",
+                    "name": "Condición del ítem",
+                    "value_id": "2230284",
+                    "value_name": "Nuevo",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": "2230284",
+                            "name": "Nuevo",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "MODEL",
+                    "name": "Modelo",
+                    "value_id": null,
+                    "value_name": "OTG C",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "OTG C",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "OUTPUT_CONNECTORS",
+                    "name": "Conectores de salida",
+                    "value_id": null,
+                    "value_name": "1",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "1",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "OUTPUT_CONNECTORS_NUMBER",
+                    "name": "Cantidad de conectores de salida",
+                    "value_id": null,
+                    "value_name": "1",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "1",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "PRODUCT_FEATURES",
+                    "name": "Características del producto",
+                    "value_id": "8847339",
+                    "value_name": "Sin vencimiento",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": "8847339",
+                            "name": "Sin vencimiento",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "SHIPMENT_PACKING",
+                    "name": "Embalaje del envío",
+                    "value_id": "7435891",
+                    "value_name": "Bolsa",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": "7435891",
+                            "name": "Bolsa",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "UNITS_PER_PACKAGE",
+                    "name": "Unidades por envase",
+                    "value_id": null,
+                    "value_name": "1",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "1",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "USB_PORT_VERSION",
+                    "name": "Versión del puerto USB",
+                    "value_id": "8701032",
+                    "value_name": "3.1",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": "8701032",
+                            "name": "3.1",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                }
+            ],
+            "warnings": [],
+            "listing_source": "",
+            "variations": [
+                {
+                    "id": 81706687893,
+                    "price": 39.99,
+                    "attribute_combinations": [
+                        {
+                            "id": null,
+                            "name": "Color",
+                            "value_id": null,
+                            "value_name": "Negro",
+                            "value_struct": null,
+                            "values": [
+                                {
+                                    "id": null,
+                                    "name": "Negro",
+                                    "struct": null
+                                }
+                            ]
+                        }
+                    ],
+                    "available_quantity": 1,
+                    "sold_quantity": 150,
+                    "sale_terms": [],
+                    "picture_ids": [
+                        "642170-MLM45554610158_042021"
+                    ],
+                    "catalog_product_id": null
+                },
+                {
+                    "id": 81706687887,
+                    "price": 39.99,
+                    "attribute_combinations": [
+                        {
+                            "id": null,
+                            "name": "Color",
+                            "value_id": null,
+                            "value_name": "Blanco",
+                            "value_struct": null,
+                            "values": [
+                                {
+                                    "id": null,
+                                    "name": "Blanco",
+                                    "struct": null
+                                }
+                            ]
+                        }
+                    ],
+                    "available_quantity": 1,
+                    "sold_quantity": 50,
+                    "sale_terms": [],
+                    "picture_ids": [
+                        "608273-MLM45554564734_042021"
+                    ],
+                    "catalog_product_id": null
+                }
+            ],
+            "status": "active",
+            "sub_status": [],
+            "tags": [
+                "good_quality_picture",
+                "good_quality_thumbnail",
+                "immediate_payment",
+                "cart_eligible"
+            ],
+            "warranty": "Garantía del vendedor: 10 días",
+            "catalog_product_id": null,
+            "domain_id": "MLM-CELLPHONE_USB_AND_AUXILIARY_ADAPTERS",
+            "parent_item_id": null,
+            "differential_pricing": null,
+            "deal_ids": [],
+            "automatic_relist": false,
+            "date_created": "2021-04-13T21:13:48.000Z",
+            "last_updated": "2022-09-15T00:58:44.000Z",
+            "health": 0.85,
+            "catalog_listing": false,
+            "channels": [
+                "marketplace",
+                "mshops"
+            ]
+        }
+    }
+]
+

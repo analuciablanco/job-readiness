@@ -12,8 +12,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let data = readLocalFile(forName: "category")!
-        parse(jsonData: data)
+//        let data = readLocalFile(forName: "category")!
+//        parse(jsonData: data)
     }
 
 

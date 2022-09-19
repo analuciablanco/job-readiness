@@ -1,0 +1,110 @@
+{
+    "query_data": {
+        "highlight_type": "BEST_SELLER",
+        "criteria": "CATEGORY",
+        "id": "MLM437952"
+    },
+    "content": [
+        {
+            "id": "MLM779689485",
+            "position": 1,
+            "type": "ITEM"
+        },
+        {
+            "id": "MLM1335510731",
+            "position": 2,
+            "type": "ITEM"
+        },
+        {
+            "id": "MLM956992636",
+            "position": 3,
+            "type": "ITEM"
+        },
+        {
+            "id": "MLM833407832",
+            "position": 4,
+            "type": "ITEM"
+        },
+        {
+            "id": "MLM1355861327",
+            "position": 5,
+            "type": "ITEM"
+        },
+        {
+            "id": "MLM826287940",
+            "position": 6,
+            "type": "ITEM"
+        },
+        {
+            "id": "MLM1398363660",
+            "position": 7,
+            "type": "ITEM"
+        },
+        {
+            "id": "MLM1404005804",
+            "position": 8,
+            "type": "ITEM"
+        },
+        {
+            "id": "MLM942607222",
+            "position": 9,
+            "type": "ITEM"
+        },
+        {
+            "id": "MLM938705317",
+            "position": 10,
+            "type": "ITEM"
+        },
+        {
+            "id": "MLM1422512623",
+            "position": 11,
+            "type": "ITEM"
+        },
+        {
+            "id": "MLM1389679339",
+            "position": 12,
+            "type": "ITEM"
+        },
+        {
+            "id": "MLM1324434009",
+            "position": 13,
+            "type": "ITEM"
+        },
+        {
+            "id": "MLM1303557588",
+            "position": 14,
+            "type": "ITEM"
+        },
+        {
+            "id": "MLM771686947",
+            "position": 15,
+            "type": "ITEM"
+        },
+        {
+            "id": "MLM905863486",
+            "position": 16,
+            "type": "ITEM"
+        },
+        {
+            "id": "MLM1448870148",
+            "position": 17,
+            "type": "ITEM"
+        },
+        {
+            "id": "MLM1419365085",
+            "position": 18,
+            "type": "ITEM"
+        },
+        {
+            "id": "MLM1370251895",
+            "position": 19,
+            "type": "ITEM"
+        },
+        {
+            "id": "MLM854728989",
+            "position": 20,
+            "type": "ITEM"
+        }
+    ]
+}
+
