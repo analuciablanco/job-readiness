@@ -8,6 +8,8 @@
 import Foundation
 
 // MARK: - Item Detail
+typealias MultigetItemsDetail = [ItemDetail]
+
 struct ItemDetail: Decodable {
     let code: Int
     let body: Body
@@ -15,12 +17,12 @@ struct ItemDetail: Decodable {
 
 // MARK: - Body
 struct Body: Decodable {
-    let id: Int
+    let id: String
     let title: String
     let sellerID: Int
     let categoryID: String
-    let price: Double
-    let originalPrice: Int
+    let price: Double?
+    let originalPrice: Double?
     let currencyID: String
     let initialQuantity: Int
     let availableQuantity: Int

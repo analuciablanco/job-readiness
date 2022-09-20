@@ -31,12 +31,12 @@ class EndpointBuilderTests: XCTestCase {
         let sut = EndpointBuilder(endpoint: endpoint)
         let mockURL = "https://api.mercadolibre.com/sites/MLM/domain_discovery/search?limit=1&q=usb"
         
-        guard let urlString = sut.getString() as? String else {
-            print(sut.getString())
-            return
+        switch sut.getString() {
+        case .success(let safeUrlString):
+            XCTAssertEqual(safeUrlString, mockURL)
+        case .failure(let error):
+            XCTFail("Error: \(error)")
         }
-        
-        XCTAssertEqual(urlString, mockURL)
     }
     
     func test_highlightsEndpoint() {
@@ -44,12 +44,12 @@ class EndpointBuilderTests: XCTestCase {
         let sut = EndpointBuilder(endpoint: endpoint)
         let mockURL = "https://api.mercadolibre.com/highlights/MLM/category/MLM437952"
         
-        guard let urlString = sut.getString() as? String else {
-            print(sut.getString())
-            return
+        switch sut.getString() {
+        case .success(let safeUrlString):
+            XCTAssertEqual(safeUrlString, mockURL)
+        case .failure(let error):
+            XCTFail("Error: \(error)")
         }
-        
-        XCTAssertEqual(urlString, mockURL)
     }
     
     func test_multigetEndpoint_singleItem() {
@@ -57,12 +57,12 @@ class EndpointBuilderTests: XCTestCase {
         let sut = EndpointBuilder(endpoint: endpoint)
         let mockURL = "https://api.mercadolibre.com/items?ids=MLM905863486"
         
-        guard let urlString = sut.getString() as? String else {
-            print(sut.getString())
-            return
+        switch sut.getString() {
+        case .success(let safeUrlString):
+            XCTAssertEqual(safeUrlString, mockURL)
+        case .failure(let error):
+            XCTFail("Error: \(error)")
         }
-        
-        XCTAssertEqual(urlString, mockURL)
     }
     
     func test_multigetEndpoint_multipleItem() {
@@ -70,11 +70,11 @@ class EndpointBuilderTests: XCTestCase {
         let sut = EndpointBuilder(endpoint: endpoint)
         let mockURL = "https://api.mercadolibre.com/items?ids=MLM1355861327,MLM905863486,MLM854728989"
         
-        guard let urlString = sut.getString() as? String else {
-            print(sut.getString())
-            return
+        switch sut.getString() {
+        case .success(let safeUrlString):
+            XCTAssertEqual(safeUrlString, mockURL)
+        case .failure(let error):
+            XCTFail("Error: \(error)")
         }
-        
-        XCTAssertEqual(urlString, mockURL)
     }
 }

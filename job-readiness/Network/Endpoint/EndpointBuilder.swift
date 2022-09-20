@@ -20,17 +20,18 @@ struct EndpointBuilder {
         urlComponents.queryItems = endpoint.getQuerys(for: endpoint)
     }
     
-    func getString() -> Any {
+    func getString() -> Result<String, RequestError> {
         guard let safeString = urlComponents.string else {
-            return RequestError.stringUrlNil
+            return .failure(RequestError.stringUrlNil)
         }
-        return safeString
+        
+        return .success(safeString)
     }
     
-    func getUrl() -> Any {
+    func getUrl() -> Result<URL, RequestError> {
         guard let safeUrl = urlComponents.url else {
-            return RequestError.urlNil
+            return .failure(RequestError.urlNil)
         }
-        return safeUrl
+        return .success(safeUrl)
     }
 }
