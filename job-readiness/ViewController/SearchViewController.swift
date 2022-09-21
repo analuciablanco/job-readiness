@@ -126,7 +126,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let itemViewModel = ItemDetailViewModel()
-        self.navigationController?.pushViewController(ItemDetailViewController(viewModel: itemViewModel), animated: true)
+        let itemVC = ItemDetailViewController(viewModel: itemViewModel)
+        guard let itemDetail = itemsDetail?[indexPath.row] else { return }
+        itemVC.setupItemData(itemDetail: itemDetail)
+        self.navigationController?.pushViewController(itemVC, animated: true)
     }
 }
 
@@ -139,14 +142,6 @@ extension SearchViewController: UISearchBarDelegate {
             guard let categoryData = data else { return }
             print("Categoria:", categoryData[0].categoryName)
             self.fetchItems(for: categoryData)
-            
-//            DispatchQueue.main.async {
-//                self.tableView.reloadData()
-//            }
         }
     }
-    
-//    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-//        self.tableView.reloadData()
-//    }
 }
