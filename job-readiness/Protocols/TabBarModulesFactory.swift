@@ -35,35 +35,35 @@ struct TabBarModulesFactory {
             tabIcon = UIImage(systemName: "house") ?? UIImage()
             tabPosition = 0
             viewModel = UIViewController()
-            rootVC = ViewController(viewModel: viewModel)
+            rootVC = SearchViewController(viewModel: viewModel)
             rootVC.title = title
         case .favorites:
             title = "Favoritos"
             tabIcon = UIImage(systemName: "heart") ?? UIImage()
             tabPosition = 1
-            viewModel = UIViewController()
-            rootVC = ViewController(viewModel: viewModel)
+            viewModel = UnderDevelopmentViewController()
+            rootVC = viewModel
             rootVC.title = title
         case .purchases:
             title = "Mis Compras"
             tabIcon = UIImage(systemName: "bag") ?? UIImage()
             tabPosition = 2
-            viewModel = UIViewController()
-            rootVC = ViewController(viewModel: viewModel)
+            viewModel = UnderDevelopmentViewController()
+            rootVC = viewModel
             rootVC.title = title
         case .notifications:
             title = "Notificaciones"
             tabIcon = UIImage(systemName: "bell") ?? UIImage()
             tabPosition = 3
-            viewModel = UIViewController()
-            rootVC = ViewController(viewModel: viewModel)
+            viewModel = UnderDevelopmentViewController()
+            rootVC = viewModel
             rootVC.title = title
         case .more:
             title = "Más"
             tabIcon = UIImage(systemName: "list.bullet") ?? UIImage()
             tabPosition = 4
-            viewModel = UIViewController()
-            rootVC = ViewController(viewModel: viewModel)
+            viewModel = UnderDevelopmentViewController()
+            rootVC = viewModel
             rootVC.title = title
         }
         
