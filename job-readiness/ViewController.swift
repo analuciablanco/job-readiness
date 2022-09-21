@@ -8,40 +8,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-//        let data = readLocalFile(forName: "category")!
-//        parse(jsonData: data)
-    }
-
-
-    private func readLocalFile(forName name: String) -> Data? {
-        do {
-            if let bundlePath = Bundle.main.path(forResource: name,
-                                                 ofType: "json"),
-                let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
-                return jsonData
-            }
-        } catch {
-            print(error)
-        }
-        
-        return nil
+    private let viewModel: UIViewController?
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
-    private func parse(jsonData: Data) {
-        do {
-            let decodedData = try JSONDecoder().decode(Category.self,
-                                                       from: jsonData)
-            
-            print("CategoryID:", decodedData[0].categoryID)
-            print("Category name:", decodedData[0].categoryName)
-            print("===================================")
-        } catch {
-            print("decode error")
-        }
+    init(viewModel: UIViewController) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+    }
+
 }
 
