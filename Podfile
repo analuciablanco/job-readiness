@@ -4,6 +4,7 @@
 target 'job-readiness' do
 
   pod 'SwiftLint'
+  pod 'Kingfisher'
 
   target 'job-readinessTests' do
     inherit! :search_paths

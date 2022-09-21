@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SearchViewController: UIViewController {
     private let viewModel: ViewModelable?
@@ -16,6 +17,7 @@ class SearchViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
+    
     private var itemsDetail: MultigetItemsDetail?
     
     private let searchBarController: UISearchController = {
@@ -117,8 +119,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell",
                                                        for: indexPath) as? CategoryItemCell else { return UITableViewCell() }
         if itemCount != 0 {
-            cell.itemTitle.text = itemsDetail?[indexPath.row].body.title
-//            cell.itemPrice.text = String(describing: itemsDetail?[indexPath.row].body.price)
+            guard let itemsDetail = itemsDetail else { return UITableViewCell() }
+            cell.itemDetail = itemsDetail[indexPath.row]
         }
         
         return cell
@@ -128,7 +130,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         let itemViewModel = ItemDetailViewModel()
         let itemVC = ItemDetailViewController(viewModel: itemViewModel)
         guard let itemDetail = itemsDetail?[indexPath.row] else { return }
-        itemVC.setupItemData(itemDetail: itemDetail)
+        itemVC.itemDetail = itemDetail
         self.navigationController?.pushViewController(itemVC, animated: true)
     }
 }
