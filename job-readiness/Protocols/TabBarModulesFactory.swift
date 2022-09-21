@@ -26,7 +26,7 @@ struct TabBarModulesFactory {
         let tabIcon: UIImage
         let tabPosition: Int
         
-        let viewModel: UIViewController
+        let viewModel: ViewModelable
         let rootVC: UIViewController
         
         switch module {
@@ -34,36 +34,35 @@ struct TabBarModulesFactory {
             title = "Inicio"
             tabIcon = UIImage(systemName: "house") ?? UIImage()
             tabPosition = 0
-            viewModel = UIViewController()
-            rootVC = ViewController(viewModel: viewModel)
-            rootVC.title = title
+            viewModel = SearchViewModel()
+            rootVC = SearchViewController(viewModel: viewModel)
         case .favorites:
             title = "Favoritos"
             tabIcon = UIImage(systemName: "heart") ?? UIImage()
             tabPosition = 1
-            viewModel = UIViewController()
-            rootVC = ViewController(viewModel: viewModel)
+//            viewModel = UnderDevelopmentViewController()
+            rootVC = UnderDevelopmentViewController()
             rootVC.title = title
         case .purchases:
             title = "Mis Compras"
             tabIcon = UIImage(systemName: "bag") ?? UIImage()
             tabPosition = 2
-            viewModel = UIViewController()
-            rootVC = ViewController(viewModel: viewModel)
+//            viewModel = UnderDevelopmentViewController()
+            rootVC = UnderDevelopmentViewController()
             rootVC.title = title
         case .notifications:
             title = "Notificaciones"
             tabIcon = UIImage(systemName: "bell") ?? UIImage()
             tabPosition = 3
-            viewModel = UIViewController()
-            rootVC = ViewController(viewModel: viewModel)
+//            viewModel = UnderDevelopmentViewController()
+            rootVC = UnderDevelopmentViewController()
             rootVC.title = title
         case .more:
             title = "Más"
             tabIcon = UIImage(systemName: "list.bullet") ?? UIImage()
             tabPosition = 4
-            viewModel = UIViewController()
-            rootVC = ViewController(viewModel: viewModel)
+//            viewModel = UnderDevelopmentViewController()
+            rootVC = UnderDevelopmentViewController()
             rootVC.title = title
         }
         

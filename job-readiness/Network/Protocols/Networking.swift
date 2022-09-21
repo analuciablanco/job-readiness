@@ -25,7 +25,7 @@ extension Networking {
         case .success(let safeUrl):
             var request = URLRequest(url: safeUrl)
             request.httpMethod = "GET"
-            request.addValue("Bearer \(Token.value)", forHTTPHeaderField: "Authorization")
+            request.addValue("Bearer \(Token.value.rawValue)", forHTTPHeaderField: "Authorization")
             
             let task = URLSession.shared.dataTask(with: request) { data, _, error in
                 guard let safeData = data else {

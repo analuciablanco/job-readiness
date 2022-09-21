@@ -19,20 +19,20 @@ struct ItemDetail: Decodable {
 struct Body: Decodable {
     let id: String
     let title: String
-    let sellerID: Int
-    let categoryID: String
-    let price: Double?
+    let sellerID: Int?
+    let categoryID: String?
+    let price: Double
     let originalPrice: Double?
-    let currencyID: String
-    let initialQuantity: Int
-    let availableQuantity: Int
-    let soldQuantity: Int
-    let condition: String
-    let secureThumbnail: String
-    let pictures: [Picture]
-    let sellerAddress: SellerAddress
-    let status: String
-    let warranty: String
+    let currencyID: String?
+    let initialQuantity: Int?
+    let availableQuantity: Int?
+    let soldQuantity: Int?
+    let condition: String?
+    let secureThumbnail: String?
+    let pictures: [Picture]?
+    let sellerAddress: SellerAddress?
+    let status: String?
+    let warranty: String?
     
     enum CodingKeys: String, CodingKey {
         case id
