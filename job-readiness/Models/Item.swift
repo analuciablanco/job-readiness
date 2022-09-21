@@ -23,3 +23,10 @@ enum TypeEnum: String, Decodable {
     case item = "ITEM"
     case product = "PRODUCT"
 }
+
+// MARK: - Token Error
+struct ItemError: Decodable {
+    let error: String
+    let message: String
+    let status: Int
+}

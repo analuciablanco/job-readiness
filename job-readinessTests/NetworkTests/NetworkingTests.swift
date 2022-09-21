@@ -9,9 +9,10 @@ import XCTest
 @testable import job_readiness
 
 class NetworkingTests: XCTestCase {
-    let endpoint = EndpointBuilder(endpoint: EndpointType.category(search: "usb"))
     
-    func test_fetchAndDecoder() throws {
+    func test_fetchAndDecoder_ForCategory() throws {
+        let endpoint = EndpointBuilder(endpoint: EndpointType.category(search: "iphone"))
+        
         let promise = expectation(description: "Completion handler")
         print(endpoint.getUrl())
         
@@ -20,8 +21,43 @@ class NetworkingTests: XCTestCase {
                 XCTFail("Error: \(String(describing: error))")
                 return
             }
-            
-            XCTAssertEqual(safeData[0].categoryID, "MLM191198")
+            XCTAssertEqual(safeData[0].categoryID, "MLM1055")
+            promise.fulfill()
+        }
+        
+        wait(for: [promise], timeout: 5)
+    }
+    
+    func test_fetchAndDecoder_ForHighlights() throws {
+        let endpoint = EndpointBuilder(endpoint: EndpointType.highlights(categoryId: "MLM1166"))
+        
+        let promise = expectation(description: "Completion handler")
+        print(endpoint.getUrl())
+        
+        Network.fetch(endpoint, type: Item.self) { data, error in
+            guard let safeData = data else {
+                XCTFail("Error: \(String(describing: error))")
+                return
+            }
+            XCTAssertEqual(safeData.content[0].id, "MLM1333420605")
+            promise.fulfill()
+        }
+        
+        wait(for: [promise], timeout: 5)
+    }
+    
+    func test_fetchAndDecoder_ForItemDetail() throws {
+        let endpoint = EndpointBuilder(endpoint: EndpointType.multiget(ids: ["MLM1333420605"]))
+        
+        let promise = expectation(description: "Completion handler")
+        print(endpoint.getUrl())
+        
+        Network.fetch(endpoint, type: MultigetItemsDetail.self) { data, error in
+            guard let safeData = data else {
+                XCTFail("Error: \(String(describing: error))")
+                return
+            }
+            XCTAssertEqual(safeData[0].body.title, "Juguete De Peluches De Cactus Bailando Cantando Imitaciones")
             promise.fulfill()
         }
         

@@ -8,6 +8,16 @@
 import UIKit
 
 class SearchViewController: UIViewController {
+    private let viewModel: ViewModelable?
+    
+    // MARK: - Properties
+    private var itemCount: Int = 0 {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
+    private var itemsDetail: MultigetItemsDetail?
+    
     private let searchBarController: UISearchController = {
         let controller = UISearchController()
         controller.automaticallyShowsCancelButton = true
@@ -15,15 +25,18 @@ class SearchViewController: UIViewController {
         return controller
     }()
     
-    private let viewModel: UIViewController?
-    
-    private let tableView = UITableView()
+    private let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.register(CategoryItemCell.self, forCellReuseIdentifier: "itemCell")
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(viewModel: UIViewController) {
+    init(viewModel: ViewModelable) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -37,14 +50,13 @@ class SearchViewController: UIViewController {
         constraints()
         
         var isSearchBarEmpty: Bool {
+            self.tableView.reloadData()
             return searchBarController.searchBar.text?.isEmpty ?? true
         }
     }
     
     private func setupTableView() {
         view.addSubview(tableView)
-        tableView.register(CategoryItemCell.self, forCellReuseIdentifier: "itemCell")
-        tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -64,23 +76,57 @@ class SearchViewController: UIViewController {
         ])
     }
     
-    @objc func didTapButton(_ sender: UIButton) {
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .systemTeal
+    private func fetchItems(for category: Category) {
+        let endpoint = EndpointType.highlights(categoryId: category[0].categoryID)
+        Network.fetch(EndpointBuilder(endpoint: endpoint), type: Item.self) { items, error in
+            guard let itemsData = items else { return }
+            
+            let onlyItemType = itemsData.content.filter { item in
+                item.type == .item
+            }
+            
+            let itemsID = onlyItemType.map { item in
+                item.id
+            }
+            
+            self.fetchItemDetail(for: itemsID)
+        }
         
-        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    private func fetchItemDetail(for itemsID: [String]) {
+        let endpoint = EndpointType.multiget(ids: itemsID)
+        Network.fetch(EndpointBuilder(endpoint: endpoint), type: MultigetItemsDetail.self) { itemsDetail, error in
+            self.itemsDetail = itemsDetail
+            
+            DispatchQueue.main.async {
+                self.itemCount = itemsDetail?.count ?? 0
+                print("Item count:", self.itemCount)
+            }
+        }
     }
 
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return itemCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell",
+                                                       for: indexPath) as? CategoryItemCell else { return UITableViewCell() }
+        if itemCount != 0 {
+            cell.itemTitle.text = itemsDetail?[indexPath.row].body.title
+//            cell.itemPrice.text = String(describing: itemsDetail?[indexPath.row].body.price)
+        }
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let itemViewModel = ItemDetailViewModel()
+        self.navigationController?.pushViewController(ItemDetailViewController(viewModel: itemViewModel), animated: true)
     }
 }
 
@@ -91,7 +137,16 @@ extension SearchViewController: UISearchBarDelegate {
         let endpoint = EndpointType.category(search: searchString)
         Network.fetch(EndpointBuilder(endpoint: endpoint), type: Category.self) { data, error in
             guard let categoryData = data else { return }
-            print(categoryData)
+            print("Categoria:", categoryData[0].categoryName)
+            self.fetchItems(for: categoryData)
+            
+//            DispatchQueue.main.async {
+//                self.tableView.reloadData()
+//            }
         }
     }
+    
+//    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+//        self.tableView.reloadData()
+//    }
 }
