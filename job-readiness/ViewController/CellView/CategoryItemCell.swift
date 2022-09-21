@@ -8,6 +8,16 @@
 import UIKit
 
 class CategoryItemCell: UITableViewCell {
+    var itemDetail: ItemDetail? {
+        didSet {
+            guard let itemDetail = itemDetail else { return }
+            itemTitle.text = itemDetail.body.title
+            itemPrice.text = "$\(itemDetail.body.price)"
+            
+            guard let thumbnailUrl = URL(string: itemDetail.body.secureThumbnail ?? "") else { return }
+            itemImageView.kf.setImage(with: thumbnailUrl)
+        }
+    }
     
     // MARK: - Stack View
     private lazy var imageMainView: UIView = {
@@ -39,9 +49,10 @@ class CategoryItemCell: UITableViewCell {
     }()
     
     // MARK: - Properties
-    private let itemImageView: UIImageView = {
+    let itemImageView: UIImageView = {
         let image = UIImage(systemName: "house")
         let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -50,12 +61,14 @@ class CategoryItemCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 2
         label.text = "Test"
+        label.font = .systemFont(ofSize: 13)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     var itemPrice: UILabel = {
         let label = UILabel()
+        label.font = .systemFont(ofSize: 20)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -64,6 +77,7 @@ class CategoryItemCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -73,22 +87,27 @@ class CategoryItemCell: UITableViewCell {
     // MARK: - Setups
     private func setupView() {
 //        contentView.addSubview(stackView)
+        contentView.addSubview(itemImageView)
         contentView.addSubview(itemTitle)
         contentView.addSubview(itemPrice)
+    }
+    
+    private func setupConstraints() {
+        let screenWidth = UIScreen.main.bounds.width
+        let viewSafeArea = contentView.safeAreaLayoutGuide
         
         NSLayoutConstraint.activate([
-            itemTitle.topAnchor.constraint(equalTo: contentView.topAnchor),
-            itemTitle.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            itemTitle.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            itemTitle.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-//            stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-//            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-//            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-//            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-//            itemImageView.topAnchor.constraint(equalTo: imageMainView.topAnchor),
-//            itemImageView.bottomAnchor.constraint(equalTo: imageMainView.bottomAnchor),
-//            itemImageView.heightAnchor.constraint(equalToConstant: 120),
-//            itemImageView.widthAnchor.constraint(equalToConstant: 120)
+            itemImageView.widthAnchor.constraint(equalToConstant: screenWidth / 3),
+            itemImageView.heightAnchor.constraint(equalTo: itemImageView.widthAnchor),
+            itemImageView.topAnchor.constraint(equalTo: viewSafeArea.topAnchor, constant: 12),
+            itemImageView.leadingAnchor.constraint(equalTo: viewSafeArea.leadingAnchor, constant: 12),
+            itemImageView.bottomAnchor.constraint(equalTo: viewSafeArea.bottomAnchor, constant: 12),
+            itemTitle.topAnchor.constraint(equalTo: itemImageView.topAnchor),
+            itemTitle.leadingAnchor.constraint(equalTo: itemImageView.trailingAnchor, constant: 12),
+            itemTitle.trailingAnchor.constraint(equalTo: viewSafeArea.trailingAnchor, constant: -12),
+            itemPrice.topAnchor.constraint(equalTo: itemTitle.bottomAnchor, constant: 12),
+            itemPrice.leadingAnchor.constraint(equalTo: itemImageView.trailingAnchor, constant: 12),
+            itemPrice.trailingAnchor.constraint(equalTo: viewSafeArea.trailingAnchor, constant: -12)
         ])
     }
 
