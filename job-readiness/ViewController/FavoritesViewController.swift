@@ -1,16 +1,13 @@
 //
-//  SearchViewController.swift
+//  FavoritesViewController.swift
 //  job-readiness
 //
-//  Created by Ana Lucia Blanco Cervantes on 19/09/22.
+//  Created by Ana Lucia Blanco Cervantes on 22/09/22.
 //
 
 import UIKit
-import Kingfisher
 
-class SearchViewController: UIViewController {
-    private let viewModel: ViewModelable?
-    
+class FavoritesViewController: UIViewController {
     // MARK: - Properties
     private var itemCount: Int = 0 {
         didSet {
@@ -21,13 +18,6 @@ class SearchViewController: UIViewController {
     
     private var itemsDetail: MultigetItemsDetail?
     
-    private let searchBarController: UISearchController = {
-        let controller = UISearchController()
-        controller.automaticallyShowsCancelButton = true
-        controller.searchBar.placeholder = "Buscar en Mercado Libre"
-        return controller
-    }()
-    
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(CategoryItemCell.self, forCellReuseIdentifier: "itemCell")
@@ -35,29 +25,19 @@ class SearchViewController: UIViewController {
         return tableView
     }()
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    init(viewModel: ViewModelable) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
+        setupViewOnResponse()
+        let itemsID = fetchItemsID()
+        fetchItemDetail(for: itemsID)
         tableView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
-        setupSearchBar()
-        
-        var isSearchBarEmpty: Bool {
-            self.tableView.reloadData()
-            return searchBarController.searchBar.text?.isEmpty ?? true
-        }
+        setupViewOnResponse()
+        let itemsID = fetchItemsID()
+        fetchItemDetail(for: itemsID)
     }
     
     private func setupViewOnResponse() {
@@ -78,12 +58,6 @@ class SearchViewController: UIViewController {
         tableView.dataSource = self
     }
     
-    private func setupSearchBar() {
-        searchBarController.automaticallyShowsScopeBar = true
-        searchBarController.searchBar.delegate = self
-        navigationItem.searchController = searchBarController
-    }
-    
     private func constraints() {
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -93,21 +67,20 @@ class SearchViewController: UIViewController {
         ])
     }
     
-    private func fetchItems(for category: Category) {
-        let endpoint = EndpointType.highlights(categoryId: category[0].categoryID)
-        Network.fetch(EndpointBuilder(endpoint: endpoint), type: Item.self) { items, error in
-            guard let itemsData = items else { return }
-            
-            let onlyItemType = itemsData.content.filter { item in
-                item.type == .item
+    private func fetchItemsID() -> [String] {
+        let defaultsKeys = UserDefaults.standard.dictionaryRepresentation().keys
+        
+        let filteredKeys: [String] = defaultsKeys.filter { key in
+            let keyString = key.codingKey.stringValue
+            if keyString.contains("MLM") {
+                return true
+            } else {
+                return false
             }
-            
-            let itemsID = onlyItemType.map { item in
-                item.id
-            }
-            
-            self.fetchItemDetail(for: itemsID)
         }
+        
+        print("filtered keys:", filteredKeys)
+        return filteredKeys
         
     }
     
@@ -129,7 +102,7 @@ class SearchViewController: UIViewController {
 
 }
 
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemCount
     }
@@ -152,27 +125,5 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         guard let itemDetail = itemsDetail?[indexPath.row] else { return }
         itemVC.itemDetail = itemDetail
         self.navigationController?.pushViewController(itemVC, animated: true)
-    }
-}
-
-extension SearchViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let searchString = searchBar.text else { return }
-        
-        let endpoint = EndpointType.category(search: searchString)
-        Network.fetch(EndpointBuilder(endpoint: endpoint), type: Category.self) { data, error in
-            if let categoryData = data {
-                if categoryData.isEmpty {
-                    self.setupViewOnResponse()
-                } else {
-                    print("Categoria:", categoryData[0].categoryName)
-                    self.fetchItems(for: categoryData)
-                }
-                
-            } else {
-                self.setupViewOnResponse()
-                return
-            }
-        }
     }
 }

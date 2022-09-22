@@ -8,5 +8,5 @@
 import Foundation
 
 enum Token: String {
-    case value = "APP_USR-2016218974927631-092111-510112c8427b079d4568c41c34c45bad-143711423"
+    case value = "APP_USR-2016218974927631-092201-8cf7f99dce34d9ffe5d8de64bc57d2ac-143711423"
 }

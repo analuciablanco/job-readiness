@@ -14,7 +14,6 @@ class NetworkingTests: XCTestCase {
         let endpoint = EndpointBuilder(endpoint: EndpointType.category(search: "iphone"))
         
         let promise = expectation(description: "Completion handler")
-        print(endpoint.getUrl())
         
         Network.fetch(endpoint, type: Category.self) { data, error in
             guard let safeData = data else {
@@ -32,7 +31,6 @@ class NetworkingTests: XCTestCase {
         let endpoint = EndpointBuilder(endpoint: EndpointType.highlights(categoryId: "MLM1166"))
         
         let promise = expectation(description: "Completion handler")
-        print(endpoint.getUrl())
         
         Network.fetch(endpoint, type: Item.self) { data, error in
             guard let safeData = data else {
@@ -50,7 +48,6 @@ class NetworkingTests: XCTestCase {
         let endpoint = EndpointBuilder(endpoint: EndpointType.multiget(ids: ["MLM1333420605"]))
         
         let promise = expectation(description: "Completion handler")
-        print(endpoint.getUrl())
         
         Network.fetch(endpoint, type: MultigetItemsDetail.self) { data, error in
             guard let safeData = data else {

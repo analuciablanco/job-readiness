@@ -8,10 +8,6 @@
 import Foundation
 import UIKit
 
-// ViewController, ViewModel, NavigationController, TabBar Name, TabBar item
-
-// makeTabBarItem(for:
-
 enum Module {
     case home
     case favorites
@@ -41,7 +37,7 @@ struct TabBarModulesFactory {
             tabIcon = UIImage(systemName: "heart") ?? UIImage()
             tabPosition = 1
 //            viewModel = UnderDevelopmentViewController()
-            rootVC = UnderDevelopmentViewController()
+            rootVC = FavoritesViewController()
             rootVC.title = title
         case .purchases:
             title = "Mis Compras"
