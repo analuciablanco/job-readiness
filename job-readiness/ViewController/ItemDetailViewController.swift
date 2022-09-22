@@ -26,7 +26,7 @@ class ItemDetailViewController: UIViewController {
             guard let itemDetail = itemDetail else { return }
             let itemData = itemDetail.body
             itemTitle.text = itemData.title
-            itemPrice.text = "$\(itemData.price)"
+            itemPrice.text = "$\(itemData.price) MXN"
             
             guard let address = itemDetail.body.sellerAddress else { return }
             let city = address.city.name

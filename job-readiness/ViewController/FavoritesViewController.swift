@@ -11,8 +11,8 @@ class FavoritesViewController: UIViewController {
     // MARK: - Properties
     private var itemCount: Int = 0 {
         didSet {
-            self.setupViewOnResponse()
             self.tableView.reloadData()
+            self.setupViewOnResponse()
         }
     }
     
@@ -26,7 +26,6 @@ class FavoritesViewController: UIViewController {
     }()
     
     override func viewWillAppear(_ animated: Bool) {
-        setupViewOnResponse()
         let itemsID = fetchItemsID()
         fetchItemDetail(for: itemsID)
         tableView.reloadData()
@@ -35,7 +34,12 @@ class FavoritesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        setupViewOnResponse()
+        let itemsID = fetchItemsID()
+        fetchItemDetail(for: itemsID)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        tableView.reloadData()
         let itemsID = fetchItemsID()
         fetchItemDetail(for: itemsID)
     }
@@ -79,7 +83,6 @@ class FavoritesViewController: UIViewController {
             }
         }
         
-        print("filtered keys:", filteredKeys)
         return filteredKeys
         
     }

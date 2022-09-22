@@ -23,7 +23,7 @@ class UnderDevelopmentView: UIView {
         label.numberOfLines = 0
         label.textColor = .gray
         label.textAlignment = .center
-        label.text = "Oops! La categoría que buscas no se encuentra disponible."
+        label.text = "Oops! El contenido no se encuentra disponible."
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

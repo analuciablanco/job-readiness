@@ -113,7 +113,6 @@ class CategoryItemCell: UITableViewCell {
     @objc private func didTapOnFavoriteButton(_ sender: UIButton!) {
         if let itemID = itemDetail?.body.id {
             switchFavoriteStatus(for: itemID)
-            print("isFavorite value:", isFavorite)
         }
     }
     
@@ -133,12 +132,12 @@ class CategoryItemCell: UITableViewCell {
         if defaults.bool(forKey: id) {
             defaults.removeObject(forKey: id)
             defaults.synchronize()
-            print("removed:", id)
+            print("removed favorite:", id)
             isFavorite = false
         } else {
             defaults.set(true, forKey: id)
             defaults.synchronize()
-            print(id)
+            print("added favorite:", id)
             isFavorite = true
         }
     }
