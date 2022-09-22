@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import Kingfisher
 
 // MARK: - Networking
 protocol Networking {

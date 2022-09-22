@@ -2,21 +2,12 @@
 //  CustomNavigationController.swift
 //  job-readiness
 //
-//  Created by Ana Lucia Blanco Cervantes on 20/09/22.
+//  Created by Ana Lucia Blanco Cervantes on 21/09/22.
 //
 
 import UIKit
 
 class CustomNavigationController: UINavigationController {
-    
-    private var navBarCustomView: UIView {
-        let width = view.frame.width - 120 - 16 - 60
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .red
-        view.frame = .init(x: 0, y: 0, width: width, height: 50)
-        return view
-    }
     
     private var customBackButtonImage: UIImage? {
         guard let image = UIImage(systemName: "arrow.backward") else { return nil }
@@ -52,8 +43,7 @@ class CustomNavigationController: UINavigationController {
                                        target: self,
                                        action: #selector(didTapCart(_:)))
         
-//        navigationItem.rightBarButtonItem = cartItem
-        self.topViewController?.navigationItem.rightBarButtonItem = cartItem
+        self.navigationItem.rightBarButtonItem = cartItem
     }
     
     @objc func didTapCart(_ sender: UIButton) {

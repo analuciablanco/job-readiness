@@ -14,9 +14,7 @@ class CategoryTests: XCTestCase {
         do {
             if let bundlePath = Bundle.main.path(forResource: "Category", ofType: "json"),
                let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
-                
-                print(bundlePath)
-                
+
                 let decoder = JSONDecoder()
                 let response = try decoder.decode(Category.self, from: jsonData)
                 
